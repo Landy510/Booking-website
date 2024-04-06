@@ -3,7 +3,7 @@
 ## Table of Contents
 - [Technical Stack](#technical-stack)
 - [Environment Requirements](#environment-requirements)
-- [Scaffold](#Scaffold)
+- [File Structure](#file-structure)
 - [NPM Common Command](#npm-common-command)
 - [Initialization](#initialization)
 - [Git Message](#git-message)
@@ -21,7 +21,7 @@
 - VSCode
 - React 18
 
-### Scaffold
+### File Structure
 ```sh
 .
 ├── .husky                        # 設定 git hook
