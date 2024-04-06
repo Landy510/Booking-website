@@ -16,3 +16,15 @@
     border: 1px solid $border-color;
   }
 }
+
+@each $name, $fontFamily in $font-family-list {
+  .font-#{$name} {
+    font-family: $fontFamily;
+  }
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: $font-Raleway;
+  }
+}

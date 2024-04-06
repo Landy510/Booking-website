@@ -10,6 +10,16 @@ $theme-colors: (
   purple: $purple,
 );
 
+$font-Open-Sans: "Open Sans", sans-serif;
+$font-Raleway: "Raleway", sans-serif;
+$font-Roboto-Serif: "Roboto Serif", serif;
+
+// .font-${name}
+$font-family-list: 
+  "Open-Sans" $font-Open-Sans,
+  "Raleway" $font-Raleway,
+  "Roboto-Serif" $font-Roboto-Serif;
+
 // .btn-${color}
 $btn-setting-list: 
   "black" $white $black, // $name: $color, $background-color
