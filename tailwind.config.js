@@ -23,6 +23,7 @@ export default {
         md: '39px',
         xl: '85px',
       },
+      center: true,
     },
   },
   plugins: [],

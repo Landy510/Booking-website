@@ -1,17 +1,23 @@
-import { createHashRouter, redirect } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import App from '../App';
 import Layout from '../layout/Layout';
-import Login from '../features/pages/Login/Login';
+import Login from '../features/pages/login/Login';
+import Index from '../features/pages/index/Index';
 
 const router = createHashRouter([
   {
     path: '/',
     element: <App />,
-    loader: isAuthentic,
+    // loader: justForTest,
     children: [
       {
-        index: true,
         element: <Layout />,
+        children: [
+          {
+            index: true,
+            element: <Index />,
+          },
+        ],
       },
     ],
   },
@@ -23,8 +29,8 @@ const router = createHashRouter([
 
 export default router;
 
-function isAuthentic() {
-  const isTokenExisted = localStorage.getItem('token');
-  if (!isTokenExisted) return redirect('/login');
-  return isTokenExisted;
-}
+// function justForTest() {
+//   const isTokenExisted = localStorage.getItem('token');
+//   if (!isTokenExisted) return redirect('/login');
+//   return isTokenExisted;
+// }
