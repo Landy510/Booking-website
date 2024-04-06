@@ -10,6 +10,8 @@ function Layout() {
     <>
       <Header />
       <main>
+        <input type="text" placeholder="Please enter your name" />
+        <button type="button" className="btn-purple">Click Me</button>
         <Outlet />
       </main>
       <Footer />

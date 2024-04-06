@@ -1,0 +1,21 @@
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$grey: rgba(0, 0, 0, 0.6);
+$purple: rgba(108, 81, 226, 1);
+
+$theme-colors: (
+  white: $white,
+  black: $black,
+  grey: $grey,
+  purple: $purple,
+);
+
+// .btn-${color}
+$btn-setting-list: 
+  "black" $white $black, // $name: $color, $background-color
+  "purple" $white $purple;
+
+//.btn-outline-${color}
+$btn-outline-setting-list: 
+  "black" $white $black $white, // $name: $color, $background-color, $border-color
+  "purple" $white $white $purple;

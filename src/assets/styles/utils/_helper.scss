@@ -1,0 +1,18 @@
+@each $name, $color,  $bg-color in $btn-setting-list {
+  .btn-#{$name} {
+    padding: 17px 32px;
+    border-radius: 0.25rem;
+    color: $color;
+    background-color: $bg-color;
+  }
+}
+
+@each $name, $color, $bg-color, $border-color in $btn-outline-setting-list {
+  .btn-outline-#{$name} {
+    padding: 17px 32px;
+    border-radius: 0.25rem;
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+  }
+}
