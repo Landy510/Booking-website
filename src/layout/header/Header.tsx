@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
-import logoImgUrl from '../../assets/images/ic-logo-aloha.svg';
-import ToolTip from '../../shared/components/ToolTip';
+import logoImgUrl from '@/assets/images/ic-logo-aloha.svg';
+import ToolTip from '@/shared/components/ToolTip';
 
 function Header() {
   const [pos, setPos] = useState<{ x: number, y: number }>({ x: 0, y: 0 });
