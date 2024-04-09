@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
 import logoImgUrl from '@/assets/images/ic-logo-aloha.svg';
@@ -7,10 +7,11 @@ import ToolTip from '@/shared/components/ToolTip';
 function Header() {
   const [pos, setPos] = useState<{ x: number, y: number }>({ x: 0, y: 0 });
   const [isToolTipShow, setIsToolTipShow] = useState<boolean>(false);
+  const anchorRef = useRef<HTMLButtonElement>(null);
 
   function calculateToolTipPosition(e: React.MouseEvent<EventTarget>) {
-    const elTarget = e.target as HTMLLIElement;
-    const boundingRectValue = elTarget.getBoundingClientRect();
+    const currentTarget = e.currentTarget as HTMLLIElement;
+    const boundingRectValue = currentTarget.getBoundingClientRect();
     const xPos = Math.round(boundingRectValue.left + boundingRectValue.width / 2);
     const yPos = Math.round(boundingRectValue.top + boundingRectValue.height);
     setPos({ x: xPos, y: yPos });
@@ -19,7 +20,9 @@ function Header() {
 
   useEffect(() => {
     document.addEventListener('click', hideToolTip);
-    function hideToolTip() {
+    function hideToolTip(e: MouseEvent) {
+      const target = e.target as HTMLElement;
+      if (anchorRef.current && anchorRef.current.contains(target)) return;
       setIsToolTipShow(false);
     }
 
@@ -42,6 +45,7 @@ function Header() {
               type="button"
               onClick={calculateToolTipPosition}
               onMouseEnter={calculateToolTipPosition}
+              ref={anchorRef}
             >
               <NavLink
                 to="/"
