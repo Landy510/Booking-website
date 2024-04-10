@@ -1,12 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-
 import { NavLink } from 'react-router-dom';
+
+import styles from './header.module.scss';
+
 import logoImgUrl from '@/assets/images/ic-logo-aloha.svg';
 import ToolTip from '@/shared/components/ToolTip';
+import Sidebar from '../sidebar/Sidebar';
 
 function Header() {
   const [pos, setPos] = useState<{ x: number, y: number }>({ x: 0, y: 0 });
   const [isToolTipShow, setIsToolTipShow] = useState<boolean>(false);
+  const [isSideMenuBtnClicked, setIsSideMenuBtnClicked] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
 
   function calculateToolTipPosition(e: React.MouseEvent<EventTarget>) {
@@ -71,10 +75,44 @@ function Header() {
       <div className="flex justify-between items-center py-[1rem] md:hidden">
         <button
           type="button"
-          className="flex"
+          onClick={() => setIsSideMenuBtnClicked((prev) => !prev)}
         >
-          <span className="material-symbols-outlined"> menu </span>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+          <label
+            className={[
+              'flex',
+              styles['hamburger-button'],
+            ].join(' ')}
+            htmlFor="activateSideMenu"
+            aria-controls="sidebar-navigation"
+            aria-expanded={isSideMenuBtnClicked ? 'true' : 'false'}
+          >
+            <svg
+              className={styles.hamburger}
+              viewBox="0 0 100 100"
+              width="30"
+            >
+              <rect
+                className={[styles.line, styles.top].join(' ')}
+                width="80"
+                height="10"
+                x="10"
+                y={isSideMenuBtnClicked ? '45' : '25'}
+                rx="5"
+              />
+              <rect className={[styles.line, styles.middle].join(' ')} width="80" height="10" x="10" y="45" rx="5" />
+              <rect
+                className={[styles.line, styles.bottom].join(' ')}
+                width="80"
+                height="10"
+                x="10"
+                y={isSideMenuBtnClicked ? '45' : '65'}
+                rx="5"
+              />
+            </svg>
+          </label>
         </button>
+
         <NavLink to="/">
           <img
             src={logoImgUrl}
@@ -84,6 +122,14 @@ function Header() {
         <NavLink to="/login">
           Login
         </NavLink>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="activateSideMenu"
+          className="hidden"
+        />
+        <Sidebar />
       </div>
       <ToolTip
         isShow={isToolTipShow}

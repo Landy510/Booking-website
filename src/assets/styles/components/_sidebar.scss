@@ -1,0 +1,8 @@
+.side-menu {
+  transform: translateX(-100%);
+  transition: transform .5s;
+}
+
+#activateSideMenu:checked~.side-menu {
+  transform: translateX(0%);
+}

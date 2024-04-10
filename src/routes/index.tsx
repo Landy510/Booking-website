@@ -1,7 +1,7 @@
 import { createHashRouter } from 'react-router-dom';
 import App from '../App';
 import Layout from '../layout/Layout';
-import Login from '../features/pages/login/Login';
+import Login from '@/features/pages/Login/Login';
 import Index from '../features/pages/index/Index';
 
 const router = createHashRouter([
