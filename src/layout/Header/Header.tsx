@@ -5,7 +5,7 @@ import styles from './header.module.scss';
 
 import logoImgUrl from '@/assets/images/ic-logo-aloha.svg';
 import ToolTip from '@/shared/components/ToolTip';
-import Sidebar from '../sidebar/Sidebar';
+import Sidebar from '../Sidebar/Sidebar';
 
 function Header() {
   const [pos, setPos] = useState<{ x: number, y: number }>({ x: 0, y: 0 });
