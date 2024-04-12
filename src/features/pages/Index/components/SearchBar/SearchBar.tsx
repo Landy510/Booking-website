@@ -5,13 +5,15 @@ function SearchBar() {
     e.preventDefault();
   }
   return (
-    <div className="mx-auto -translate-y-1/2 flex justify-center">
+    <div className="mx-auto px-[15px] -translate-y-1/2 flex justify-center">
       <form
-        className="max-w-[57.5rem] w-full bg-purpleLight rounded-[0.5rem] p-[1.5rem] flex flex-col lg:flex-row shrink-0"
+        className="max-w-[360px] md:max-w-[600px] lg:max-w-[950px] w-full bg-purpleLight rounded-[0.5rem] p-[1.5rem] flex flex-col lg:flex-row shrink-0"
         onSubmit={handleSubmitEvt}
       >
-        <div className="px-[0.5rem] grow relative">
-          <span className="material-symbols-outlined absolute left-[1rem] top-1/2 translate-x-1/2 -translate-y-1/2">
+        <div className="p-[0.5rem] grow relative">
+          <span
+            className="material-symbols-outlined absolute left-[1rem] top-1/2 translate-x-1/2 -translate-y-1/2 fontIconFill"
+          >
             location_on
           </span>
           <input
@@ -20,9 +22,9 @@ function SearchBar() {
             className="w-full h-full pl-[3.5rem]"
           />
         </div>
-        <div className="px-[0.5rem] grow relative">
+        <div className="p-[0.5rem] grow relative">
           <span
-            className="material-symbols-outlined absolute left-[1rem] top-1/2 translate-x-1/2 -translate-y-1/2"
+            className="material-symbols-outlined absolute left-[1rem] top-1/2 translate-x-1/2 -translate-y-1/2 fontIconFill"
           >
             calendar_month
           </span>
@@ -32,8 +34,8 @@ function SearchBar() {
             className="w-full h-full pl-[3.5rem]"
           />
         </div>
-        <div className="px-[0.5rem] grow relative">
-          <span className="material-symbols-outlined absolute left-[1rem] top-1/2 translate-x-1/2 -translate-y-1/2">
+        <div className="p-[0.5rem] grow relative">
+          <span className="material-symbols-outlined absolute left-[1rem] top-1/2 translate-x-1/2 -translate-y-1/2 fontIconFill">
             person
           </span>
           <input
@@ -43,10 +45,10 @@ function SearchBar() {
           />
         </div>
 
-        <div className="px-[0.5rem]">
+        <div className="p-[0.5rem]">
           <button
             type="submit"
-            className="btn-purple font-bold"
+            className="btn-purple font-bold w-full"
           >
             SEARCH
           </button>
