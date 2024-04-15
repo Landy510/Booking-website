@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Sidebar() {
   const [showMultiLang, setShowMultiLang] = useState(false);
   return (
-    <div className="side-menu container fixed top-[56px] bottom-[0] left-[0] right-[0] bg-black text-white">
+    <div className="side-menu container fixed top-[62px] bottom-[0] left-[0] bg-black text-white">
       <nav>
         <ul>
           <li className="py-[1rem]">
