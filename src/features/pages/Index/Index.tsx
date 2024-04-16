@@ -6,7 +6,7 @@ import top4ImgUrl from '@/assets/images/top4.jpg';
 import Banner from './components/Banner/Banner';
 import SearchBar from './components/SearchBar/SearchBar';
 
-const topChicesList = [
+const topChoicesList = [
   {
     id: 0,
     img: top1ImgUrl,
@@ -34,31 +34,34 @@ function Index() {
     <div>
       <Banner />
       <SearchBar />
-      <div className="container">
-        <section>
-          <h2 className="font-Raleway text-[2rem] font-bold mb-[1.5rem]">Top Choices</h2>
-          <ul className="font-Raleway flex mb-[1.5rem]">
-            <li className="text-[1.25rem] md:text-[1.5rem] text-grey font-bold px-[1rem] md:px-[1.5rem] border-b-[0.15rem] border-purple border-solid text-purple">
-              Bali
-              <span className="align-super text-[0.75rem] md:text-[1rem]">128</span>
-            </li>
-            <li className="text-[1.25rem] md:text-[1.5rem] text-grey font-bold px-[1rem] md:px-[1.5rem] border-b-[0.15rem] border-purpleLight border-solid">
-              Okinawa
-              <span className="align-super text-[0.75rem] md:text-[1rem]">67</span>
-            </li>
-            <li className="text-[1.25rem] md:text-[1.5rem] text-grey font-bold px-[1rem] md:px-[1.5rem] border-b-[0.15rem] border-purpleLight border-solid">
-              Taipei
-              <span className="align-super text-[0.75rem] md:text-[1rem]">53</span>
-            </li>
-          </ul>
-          <ul className="flex mx-[-15px] overflow-x-auto">
+      <section>
+        <h2 className="font-Raleway text-[2rem] font-bold mb-[1.5rem] container">Top Choices</h2>
+        <ul className="font-Raleway flex mb-[1.5rem] container">
+          <li className="text-[1.25rem] md:text-[1.5rem] text-grey font-bold px-[1rem] md:px-[1.5rem] border-b-[0.15rem] border-purple border-solid text-purple">
+            Bali
+            <span className="align-super text-[0.75rem] md:text-[1rem]">128</span>
+          </li>
+          <li className="text-[1.25rem] md:text-[1.5rem] text-grey font-bold px-[1rem] md:px-[1.5rem] border-b-[0.15rem] border-purpleLight border-solid">
+            Okinawa
+            <span className="align-super text-[0.75rem] md:text-[1rem]">67</span>
+          </li>
+          <li className="text-[1.25rem] md:text-[1.5rem] text-grey font-bold px-[1rem] md:px-[1.5rem] border-b-[0.15rem] border-purpleLight border-solid">
+            Taipei
+            <span className="align-super text-[0.75rem] md:text-[1rem]">53</span>
+          </li>
+        </ul>
+        <div className="max-w-[1280px] ml-[15px] md:ml-[39px] xl:px-[85px] xl:mx-auto overflow-x-auto">
+          <ul className="flex mx-[-15px] ">
             {
-              topChicesList.map((info) => (
-                <li key={info.id} className="shrink-0 xl:w-[25%] px-[15px]">
+              topChoicesList.map((info) => (
+                <li
+                  key={info.id}
+                  className="flex flex-col shrink-0 px-[15px] w-full w-[300px] xl:w-[25%]"
+                >
                   <img
                     src={info.img}
                     alt=""
-                    className="rounded-[0.5rem] mb-[0.5rem] max-h-[164px] md:max-h-[185px] w-full object-cover"
+                    className="grow rounded-[0.5rem] mb-[0.5rem] max-h-[164px] md:max-h-[185px] w-full object-cover"
                   />
                   <h3 className="font-Open-Sans font-bold mb-[0.5rem]">{info.name}</h3>
                   <div className="flex items-center mb-[0.5rem]">
@@ -89,10 +92,9 @@ function Index() {
                 </li>
               ))
             }
-
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
