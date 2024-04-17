@@ -56,7 +56,7 @@ function Index() {
               topChoicesList.map((info) => (
                 <li
                   key={info.id}
-                  className="flex flex-col shrink-0 px-[15px] w-full w-[300px] xl:w-[25%]"
+                  className="flex flex-col shrink-0 px-[15px] w-[300px] xl:w-[25%]"
                 >
                   <img
                     src={info.img}
@@ -82,8 +82,8 @@ function Index() {
                         star
                       </span>
                     </span>
-                    <span className="text-[14px]">5.0</span>
-                    <span className="text-[12px] text-grey">．2k reviews</span>
+                    <span className="text-[14px] leading-[1.5rem]">5.0</span>
+                    <span className="text-[12px] text-grey leading-[1.5rem]">．2k reviews</span>
                   </div>
                   <div className="font-Open-Sans text-grey">
                     <span className="mr-[0.5rem] text-[14px]">TWD 2480</span>
