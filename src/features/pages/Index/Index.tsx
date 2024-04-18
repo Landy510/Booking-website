@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import TopChoices from './components/TopChoices/TopChoices';
 import PopularDestinations from './components/PopularDestinations/PopularDestinations';
 import GetInspiration from './components/GetInspiration/GetInspiration';
+import Subscribe from './components/Subscribe/Subscribe';
 
 function Index() {
   return (
@@ -12,6 +13,7 @@ function Index() {
       <TopChoices />
       <PopularDestinations />
       <GetInspiration />
+      <Subscribe />
     </div>
   );
 }
