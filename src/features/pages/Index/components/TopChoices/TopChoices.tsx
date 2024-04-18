@@ -29,8 +29,8 @@ const topChoicesList = [
 function TopChoices() {
   return (
     <section className="mb-[4.5rem]">
-      <h2 className="font-Raleway text-[2rem] font-bold mb-[1.5rem] container">Top Choices</h2>
-      <ul className="font-Raleway flex mb-[1.5rem] container">
+      <h2 className="font-Raleway text-[1.5rem] md:text-[2rem] font-bold mb-[1.5rem] container">Top Choices</h2>
+      <ul className="font-Raleway flex mb-[1.5rem] container overflow-x-auto">
         <li className="text-[1.25rem] md:text-[1.5rem] text-grey font-bold px-[1rem] md:px-[1.5rem] border-b-[0.15rem] border-purple border-solid text-purple cursor-pointer">
           Bali
           <span className="align-super text-[0.75rem] md:text-[1rem]">128</span>

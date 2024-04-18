@@ -5,7 +5,7 @@ function SearchBar() {
     e.preventDefault();
   }
   return (
-    <div className="mx-auto px-[15px] -translate-y-1/2 flex justify-center">
+    <div className="mx-auto px-[15px] -translate-y-[15%] lg:-translate-y-1/2 flex justify-center">
       <form
         className="max-w-[360px] md:max-w-[600px] lg:max-w-[950px] w-full bg-purpleLight rounded-[0.5rem] p-[1.5rem] flex flex-col lg:flex-row shrink-0"
         onSubmit={handleSubmitEvt}

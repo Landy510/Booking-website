@@ -47,7 +47,7 @@ const destinationsList = [
 
 function PopularDestinations() {
   return (
-    <section className="container">
+    <section className="container mb-[3rem]">
       <h2 className="font-Raleway text-[1.5rem] md:text-[2rem] font-bold mb-[1.5rem]">Popular Destinations</h2>
       <ul className="text-black flex flex-wrap m-[-0.25rem] md:m-[-0.75rem] xl:m-[-15px]">
         {
