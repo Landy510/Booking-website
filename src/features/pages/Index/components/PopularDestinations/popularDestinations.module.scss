@@ -1,0 +1,22 @@
+.destination {
+  h3 {
+    position: relative;
+  }
+
+  h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    background-color: #fff;
+    transition: width .5s;
+  }
+}
+
+.destination:hover {
+  h3::after {
+    width: 100%;
+  }
+}
